@@ -36,6 +36,11 @@
 ehthumbs.db
 Thumbs.db
 
+# Dist Directories #
+####################
+dist/
+dist-ext/
+
 # Node_Modules #
 ################
 node_modules/
