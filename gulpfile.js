@@ -1,19 +1,19 @@
-const gulp = require('gulp');
-const bom = require('gulp-bom');
-var ext_replace = require('gulp-ext-replace');
+const gulp = require("gulp");
+const bom = require("gulp-bom");
+const ext_replace = require("gulp-ext-replace");
 
-gulp.task('bom-ify', () => {
+gulp.task("bom-ify", () => {
   gulp
-    .src('./test-files/*.srt')
+    .src("./test-files/*.srt")
     .pipe(bom())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest("dist"));
 });
 
-gulp.task('change-ext', () => {
+gulp.task("change-ext", () => {
   gulp
-    .src('./ext-files/*.txt')
-    .pipe(ext_replace('.srt'))
-    .pipe(gulp.dest('dist-ext'));
+    .src("./ext-files/*.txt")
+    .pipe(ext_replace(".srt"))
+    .pipe(gulp.dest("dist-ext"));
 });
 
-gulp.task('default', ['bom-ify', 'change-ext']);
+gulp.task("default", ["bom-ify", "change-ext"]);
