@@ -2,6 +2,7 @@ const gulp = require("gulp");
 const bom = require("gulp-bom");
 const ext_replace = require("gulp-ext-replace");
 
+//Todo: add ANSI to UTF-8
 gulp.task("bom-ify", () => {
   gulp
     .src("./test-files/*.srt")
